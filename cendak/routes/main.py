@@ -12,7 +12,9 @@ routes_main = Blueprint("routes_main", __name__)
 
 @routes_main.get("/")
 def home():
-    return render_template("home.html")
+    links = cendak_links.fetch()
+
+    return render_template("home.html", links=links)
 
 @routes_main.post("/add")
 def add():

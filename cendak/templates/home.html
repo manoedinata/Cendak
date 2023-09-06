@@ -6,7 +6,7 @@ Home
 
 {% block content %}
 
-<div id="short">
+<div id="short" class="py-2">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,6 +18,26 @@ Home
                     </div>
                 </form>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="list" class="py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Shortened Links ({{ links.count }})</h2>
+
+                <ul>
+                    {% for link in links.items %}
+                    <li>
+                        <b><a href="{{ url_for('routes_redirect.redirect_id', id=link['key']) }}">
+                            {{ link["key"] }}
+                        </a></b>: {{ link["value"] }}
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
