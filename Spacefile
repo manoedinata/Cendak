@@ -1,0 +1,11 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: cendak
+    engine: python3.9
+    primary: true
+    src: ./
+    public_routes:
+      - "/r/*"
+    run: gunicorn main:app
+    dev: .venv/bin/flask --debug --app main run

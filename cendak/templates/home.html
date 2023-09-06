@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div id="short">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <form action="{{ url_for('routes_main.add' ) }}" method="post">
+                    <div class="input-group mb-3">
+                        <input type="url" name="shortLink" class="form-control" placeholder="https://google.com">
+                        <button class="btn btn-outline-dark" type="submit" id="shortSubmit">Shorten!</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
