@@ -1,3 +1,5 @@
-# Cendak
+## Cendak
 
-Simple URL shortener.
+A very simple private URL shortener, on Deta Space.
+
+Built with Flask and Deta SDK.
